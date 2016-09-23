@@ -4,7 +4,16 @@ import {HomePageComponent} from "./app.home";
 const appRoutes:Routes = [
     {path: '', pathMatch: 'full', redirectTo: '/home'},
     {path: 'home', component: HomePageComponent},
-    {path: 'page1', loadChildren: 'app/heros/heroes.module#HeroesModule'},
+    // {path: 'heroes', loadChildren: 'app/heroes/heroes.module#HeroesModule'},
+    {path: 'heroes', loadChildren: () => require('es6-promise!./heroes/heroes.module')('HeroesModule')},
+
+    // {
+    //     path: 'heroes', loadChildren: () => new Promise(function (resolve) {
+    //     require.ensure([], function (require) {
+    //         resolve(require('./heroes/heroes.module')['HeroesModule']);
+    //     });
+    // })
+    // }
 
 ];
 
