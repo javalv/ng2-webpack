@@ -1,0 +1,5 @@
+{
+    "port": 3000,
+    "files": ["./dist/**/*.{html,htm,css,js,png,jpeg,jpg,gif,svg,woff,woff2,ttf,eot,ico}"],
+    "server": { "baseDir": "./dist" }
+}

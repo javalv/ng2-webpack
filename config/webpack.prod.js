@@ -3,6 +3,9 @@ var webpackMerge = require('webpack-merge');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var commonConfig = require('./webpack.common.js');
 var helpers = require('./helpers');
+var path = require('path');
+var buildPath = path.resolve(__dirname,"../dist/images");
+var TransferWebpackPlugin = require('transfer-webpack-plugin');
 
 const ENV = process.env.NODE_ENV = process.env.ENV = 'production';
 
@@ -33,6 +36,11 @@ module.exports = webpackMerge(commonConfig, {
             'process.env': {
                 'ENV': JSON.stringify(ENV)
             }
-        })
+        }),
+
+        //把指定文件夹下的文件复制到指定的目录
+        //new TransferWebpackPlugin([
+        //    {from: '../public/images/'}
+        //], buildPath)
     ]
 });

@@ -5,6 +5,6 @@ import {Component} from '@angular/core';
 })
 export class HomePageComponent {
     ngOnInit(){
-        console.log("home...")
+        console.log("home1...")
     }
 }
