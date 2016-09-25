@@ -1,7 +1,7 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
 import {Subscription} from "rxjs/Subscription";
-import '../../../public/images/angular.png'
+import "../../../public/images/angular.png";
 @Component({
     selector: 'heroes-detail-page',
     template: `<span>详情页{{name}}</span>
