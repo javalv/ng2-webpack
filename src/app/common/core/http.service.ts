@@ -1,20 +1,28 @@
 import { Injectable, Optional } from '@angular/core';
 
 export class HttpServiceConfig {
-    host = '192.168.0.10';
+    host : string;
+    port : number;
 }
 
 @Injectable()
 export class HttpService {
 
     private _host = 'localhost';
+    private _port = 80;
 
     constructor(@Optional() config: HttpServiceConfig) {
-        if (config) { this._host = config.host; }
+        if (config) {
+            this._host = config.host;
+            this._port = config.port;
+        }
     }
 
     public getName() {
-
-        return "http://" + this._host ;
+        if(this._port && this._port != 80){
+            return "http://" + this._host + ":" + this._port;
+        }else {
+            return "http://" + this._host;
+        }
     }
 }

@@ -4,13 +4,14 @@ import { AppComponent } from './app.component';
 import {routing} from "./app.routing";
 import {HomePageComponent} from "./app.home";
 import {CoreModule} from "./common/core/core.module";
-import {SharedModule} from "./common/shared/shared.module";
+// import {SharedModule} from "./common/shared/shared.module";
 @NgModule({
     imports: [
         BrowserModule,
-        CoreModule.forRoot({host: '192.168.1.1'}),
-        SharedModule,
+        CoreModule.forRoot({host:'192.168.10.1',port:8080}),
+        // SharedModule,
         routing,
+
     ],
     declarations: [
         AppComponent,

@@ -1,21 +1,24 @@
 import {NgModule} from "@angular/core";
 import {CommonModule} from "@angular/common";
 import {FormsModule} from "@angular/forms";
-import { heroesRouting } from './heroes.routing';
+import {heroesRouting} from './heroes.routing';
 import {HeroesDetailComponent} from "./heroes.detail";
 import {HeroesPageComponent} from "./heroes";
 import {HeroesListPageComponent} from "./heroes.list";
+import {LoadingShade} from "../common/shared/shared.loading";
 
 @NgModule({
     imports: [
         CommonModule,
         FormsModule,
-        heroesRouting
+        heroesRouting,
+
     ],
     declarations: [
         HeroesListPageComponent,
         HeroesDetailComponent,
-        HeroesPageComponent
+        HeroesPageComponent,
+        LoadingShade
     ],
     providers: [
         // HeroService

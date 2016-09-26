@@ -4,8 +4,8 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var commonConfig = require('./webpack.common.js');
 var helpers = require('./helpers');
 var path = require('path');
-var buildPath = path.resolve(__dirname,"../dist/images");
-var TransferWebpackPlugin = require('transfer-webpack-plugin');
+// var buildPath = path.resolve(__dirname,"../dist/images");
+// var TransferWebpackPlugin = require('transfer-webpack-plugin');
 
 const ENV = process.env.NODE_ENV = process.env.ENV = 'production';
 

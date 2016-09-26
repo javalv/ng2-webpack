@@ -6,7 +6,6 @@ const appRoutes:Routes = [
     {path: 'home', component: HomePageComponent},
     // {path: 'heroes', loadChildren: 'app/heroes/heroes.module#HeroesModule'},
     {path: 'heroes', loadChildren: () => require('es6-promise!./heroes/heroes.module')('HeroesModule')},
-
     // {
     //     path: 'heroes', loadChildren: () => new Promise(function (resolve) {
     //     require.ensure([], function (require) {
@@ -14,7 +13,6 @@ const appRoutes:Routes = [
     //     });
     // })
     // }
-
 ];
 
 export const appRoutingProviders:any[] = [];
