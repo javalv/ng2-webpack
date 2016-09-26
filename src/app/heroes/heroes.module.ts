@@ -5,23 +5,24 @@ import {heroesRouting} from './heroes.routing';
 import {HeroesDetailComponent} from "./heroes.detail";
 import {HeroesPageComponent} from "./heroes";
 import {HeroesListPageComponent} from "./heroes.list";
-import {LoadingShade} from "../common/shared/shared.loading";
+import {SharedModule} from "../common/shared/shared.module";
+import {HeroesService} from "./heroes.service";
 
 @NgModule({
     imports: [
         CommonModule,
         FormsModule,
         heroesRouting,
-
+        SharedModule
     ],
     declarations: [
         HeroesListPageComponent,
         HeroesDetailComponent,
         HeroesPageComponent,
-        LoadingShade
+
     ],
     providers: [
-        // HeroService
+         HeroesService
     ]
 })
 export class HeroesModule {}

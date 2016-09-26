@@ -3,6 +3,7 @@ import {ActivatedRoute, Router} from "@angular/router";
 import {Subscription} from "rxjs/Subscription";
 import "../../../public/images/angular.png";
 import {BaseComponent} from "../common/base/com.base";
+import {HeroesService} from "./heroes.service";
 @Component({
     selector: 'heroes-detail-page',
     template: `<span>详情页{{name}}</span>
@@ -16,7 +17,9 @@ import {BaseComponent} from "../common/base/com.base";
 export class HeroesDetailComponent extends BaseComponent implements OnInit, OnDestroy {
     constructor(
         private router: Router,
-        private route: ActivatedRoute){
+        private route: ActivatedRoute,
+        private heroesService:HeroesService
+    ){
         super();
     }
 
@@ -26,6 +29,7 @@ export class HeroesDetailComponent extends BaseComponent implements OnInit, OnDe
 
         setTimeout(()=>{
             super.onLoaded();
+            this.request();
         },2000);
 
         // this.name = this.route.snapshot.params['id']; 这种方式为不需要连续调用详情页，常规模式
@@ -42,6 +46,10 @@ export class HeroesDetailComponent extends BaseComponent implements OnInit, OnDe
 
     next(){
         this.router.navigate(['/heroes', 'nextName']);
+    }
+
+    private request():void {
+        console.log("heroes: " + this.heroesService.getCrises("123"));
     }
 
 }

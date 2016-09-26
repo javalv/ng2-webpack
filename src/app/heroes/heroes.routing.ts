@@ -4,7 +4,7 @@ import {HeroesPageComponent} from "./heroes";
 import {HeroesListPageComponent} from './heroes.list';
 import {HeroesDetailComponent} from "./heroes.detail";
 
-const heroesRoutes:Routes = [
+const heroesRoutes:Routes = <Routes>[
     {
         path: '',
         component: HeroesPageComponent,

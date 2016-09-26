@@ -1,16 +1,20 @@
 import {ViewChild} from '@angular/core';
 import {LoadingShade} from "../shared/shared.loading";
-export class BaseComponent {
-    constructor(){}
+import {HttpService} from "../core/http.service";
+export abstract class BaseComponent {
+    constructor() {
+    }
 
     @ViewChild(LoadingShade)
-    protected loadingShade: LoadingShade;
+    protected loadingShade:LoadingShade;
 
-    onLoaded(){
-        if(this.loadingShade){
+    onLoaded() {
+        if (this.loadingShade) {
             this.loadingShade.hasLoaded();
         }
     }
+
+
 
 
 }
