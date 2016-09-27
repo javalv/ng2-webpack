@@ -4,11 +4,12 @@ import {Component, Input, ViewContainerRef, TemplateRef} from "@angular/core";
     template: `<div *ngIf="hide">loading...</div>`,
     styles: ['div{' +
             'position: absolute;' +
-            'top:60px;bottom: 0px;left:0;right:0;' +
+            'top:60px;height:20px;width:100px;' +
             'background-color: #8c8c8c' +
             '}'],
+
 })
-export class LoadingShade {
+export class LoadingShadeComponent {
     private hide:boolean;
 
     constructor() {

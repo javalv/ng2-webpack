@@ -7,6 +7,7 @@ import {HeroesPageComponent} from "./heroes";
 import {HeroesListPageComponent} from "./heroes.list";
 import {SharedModule} from "../common/shared/shared.module";
 import {HeroesService} from "./heroes.service";
+import {BaseComponent} from "../common/base/com.base";
 
 @NgModule({
     imports: [
@@ -19,7 +20,7 @@ import {HeroesService} from "./heroes.service";
         HeroesListPageComponent,
         HeroesDetailComponent,
         HeroesPageComponent,
-
+        // BaseComponent
     ],
     providers: [
          HeroesService
