@@ -21,6 +21,7 @@ export class CoreModule {
     }
 
     static forRoot(config: HttpServiceConfig): ModuleWithProviders {
+        console.info("core.module is loading...")
         return <ModuleWithProviders>{
             ngModule: CoreModule,
             providers: [

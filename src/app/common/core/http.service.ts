@@ -12,6 +12,8 @@ export class HttpService {
     private _port = 80;
 
     constructor(@Optional() config: HttpServiceConfig) {
+        console.info('http.service is loading...')
+
         if (config) {
             this._host = config.host;
             this._port = config.port;

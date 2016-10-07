@@ -2,7 +2,7 @@ import {Component,ViewChild} from '@angular/core';
 import {Router} from "@angular/router";
 import {HttpService} from "../common/core/http.service";
 import {BaseComponent} from "../common/base/com.base";
-import {LoadingShade} from "../common/shared/shared.loading";
+import {LoadingShadeComponent} from "../common/shared/shared.loading";
 @Component({
     selector: 'heroes-list-page',
     template: `<div>
@@ -14,8 +14,8 @@ import {LoadingShade} from "../common/shared/shared.loading";
 })
 export class HeroesListPageComponent{
 
-    @ViewChild(LoadingShade)
-    protected loadingShade: LoadingShade;
+    @ViewChild(LoadingShadeComponent)
+    protected loadingShade: LoadingShadeComponent;
 
     onLoaded(){
         if(this.loadingShade){
