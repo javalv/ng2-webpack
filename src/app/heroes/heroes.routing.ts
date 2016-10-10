@@ -3,6 +3,7 @@ import {Routes, RouterModule} from '@angular/router';
 import {HeroesPageComponent} from "./heroes";
 import {HeroesListPageComponent} from './heroes.list';
 import {HeroesDetailComponent} from "./heroes.detail";
+import {DemoDetailComponent} from "./demo";
 
 const heroesRoutes:Routes = <Routes>[
     {
@@ -10,7 +11,8 @@ const heroesRoutes:Routes = <Routes>[
         component: HeroesPageComponent,
         children: [
             {path: '', component: HeroesListPageComponent},
-            {path: ':id', component: HeroesDetailComponent}
+            {path: ':id', component: DemoDetailComponent},
+            // {path: 'demo', component: DemoDetailComponent}
         ]
     }
 ];

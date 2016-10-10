@@ -8,6 +8,7 @@ import {LoadingShadeComponent} from "../common/shared/shared.loading";
     template: `<div>
                     <div (click)="onSelect('zhangsan')">张三</div>
                     <div (click)="onSelect('lisi')">李四</div>
+                    <div (click)="gotoDemo()">DEMO</div>
                 </div>
                 <load-shade ></load-shade>`,
 
@@ -38,5 +39,9 @@ export class HeroesListPageComponent{
 
     onSelect(name:any) {
         this.router.navigate(['/heroes', name]);
+    }
+
+    gotoDemo(){
+        this.router.navigate(['/demo']);
     }
 }

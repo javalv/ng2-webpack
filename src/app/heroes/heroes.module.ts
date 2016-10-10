@@ -8,6 +8,7 @@ import {HeroesListPageComponent} from "./heroes.list";
 import {SharedModule} from "../common/shared/shared.module";
 import {HeroesService} from "./heroes.service";
 import {BaseComponent} from "../common/base/com.base";
+import {DemoDetailComponent} from "./demo";
 
 @NgModule({
     imports: [
@@ -20,6 +21,7 @@ import {BaseComponent} from "../common/base/com.base";
         HeroesListPageComponent,
         HeroesDetailComponent,
         HeroesPageComponent,
+        DemoDetailComponent,
         // BaseComponent
     ],
     providers: [
