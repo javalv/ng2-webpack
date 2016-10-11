@@ -35,6 +35,7 @@ export class HeroesListPageComponent{
         setTimeout(()=>{
             this.onLoaded();
         },1000)
+        this.router.navigate(['/heroes', "demo"]);
     }
 
     onSelect(name:any) {

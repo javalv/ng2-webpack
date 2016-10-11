@@ -1,12 +1,12 @@
 <div class="header-top">
     <div class="header-bottom">
         <div class="logo">
-            <h1><a href="index.html">Lighting</a></h1>
+            <h1><a href="index.html">大麦科技</a></h1>
         </div>
         <div class="top-nav">
             <ul class="memenu skyblue">
-                <li><a href="/home">首页</a></li>
-                <li><a href="/heroes">购物车</a></li>
+                <li><a routerLink="/home">首页</a></li>
+                <li><a routerLink="/heroes">购物车</a></li>
             </ul>
             <div class="clearfix"> </div>
         </div>
@@ -24,3 +24,68 @@
     <div class="clearfix"> </div>
 </div>
 <router-outlet></router-outlet>
+<div class="subscribe">
+    <div class="container">
+        <h3>Newsletter</h3>
+        <form>
+            <input type="text" class="text" value="Email" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = 'Email';}">
+            <input type="submit" value="Subscribe">
+        </form>
+    </div>
+</div>
+<div class="footer">
+    <div class="container">
+        <div class="footer-grids">
+            <div class="col-md-3 about-us">
+                <h3>About Us</h3>
+                <p>Maecenas nec auctor sem. Vivamus porttitor tincidunt elementum nisi a, euismod rhoncus urna. Curabitur scelerisque vulputate arcu eu pulvinar. Fusce vel neque diam</p>
+            </div>
+            <div class="col-md-3 ftr-grid">
+                <h3>Information</h3>
+                <ul class="nav-bottom">
+                    <li><a href="#">Track Order</a></li>
+                    <li><a href="#">New Products</a></li>
+                    <li><a href="#">Location</a></li>
+                    <li><a href="#">Our Stores</a></li>
+                    <li><a href="#">Best Sellers</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 ftr-grid">
+                <h3>More Info</h3>
+                <ul class="nav-bottom">
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">Shipping</a></li>
+                    <li><a href="#">Membership</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 ftr-grid">
+                <h3>Categories</h3>
+                <ul class="nav-bottom">
+                    <li><a href="#">Car Lights</a></li>
+                    <li><a href="#">LED Lights</a></li>
+                    <li><a href="#">Decorates</a></li>
+                    <li><a href="#">Wall Lights</a></li>
+                    <li><a href="#">Protectors</a></li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+<div class="copywrite">
+    <div class="container">
+        <div class="copy">
+            <p>Copyright &copy; 2015.Company name All rights reserved.<a target="_blank" href="http://www.cssmoban.com/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p>
+        </div>
+        <div class="social">
+            <a href="#"><i class="facebook"></i></a>
+            <a href="#"><i class="twitter"></i></a>
+            <a href="#"><i class="dribble"></i></a>
+            <a href="#"><i class="google"></i></a>
+            <a href="#"><i class="youtube"></i></a>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
