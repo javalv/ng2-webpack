@@ -6,6 +6,15 @@ import '../../public/css/memenu.css';
 // import '../../public/css/flexslider.css';
 import '../../public/css/form.css';
 
+import '../../public/images/img1.jpg';
+import '../../public/images/img2.jpg';
+import '../../public/images/img3.jpg';
+import '../../public/images/img4.jpg';
+import '../../public/images/img5.jpg';
+import '../../public/images/img6.jpg';
+import '../../public/images/img7.jpg';
+import '../../public/images/img8.jpg';
+
 @Component({
     selector: 'my-app',
     templateUrl: './app.component.html',
